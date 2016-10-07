@@ -14,6 +14,10 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.daimajia.androidanimations.library.Techniques;
+import com.daimajia.androidanimations.library.YoYo;
+import com.google.android.gms.location.LocationRequest;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -33,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String TAG = MainActivity.class.getSimpleName();
 
     private CurrentWeather mCurrentWeather;
+    private LocationRequest mLocationRequest;
 
     @BindView(R.id.temperatureLabel) TextView mTemperatureLabel;
     @BindView(R.id.timeLabel) TextView mTimeLabel;
@@ -53,8 +58,9 @@ public class MainActivity extends AppCompatActivity {
 
         mProgressBar.setVisibility(View.INVISIBLE);
 
-        final double latitude = 36.1699;
-        final double longitude = -115.172813;
+        final double latitude = 34.052235;
+        final double longitude = -118.243683;
+
 
         mRefreshImageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -138,6 +144,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateDisplay() {
+        YoYo.with(Techniques.DropOut)
+                .duration(2000)
+                .playOn(findViewById(R.id.temperatureLabel));
         mTemperatureLabel.setText(mCurrentWeather.getTemperature()+ "");
         mTimeLabel.setText("At " + mCurrentWeather.getFormattedTime()+ " it will be");
         mHumidityValue.setText(mCurrentWeather.getHumidity() + "");
