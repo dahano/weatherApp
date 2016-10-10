@@ -1,10 +1,12 @@
-package ofirdahan.com.stormy;
+package ofirdahan.com.stormy.weather;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class CurrentWeather {
+import ofirdahan.com.stormy.R;
+
+public class Current {
     private String mIcon;
     private Long mTime;
     private double mTemperature;
