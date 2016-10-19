@@ -7,7 +7,7 @@ public class Hour {
     private String mIcon;
     private String mTimeZone;
 
-    public Long getTime() {
+    public Long getTime(long time) {
         return mTime;
     }
 

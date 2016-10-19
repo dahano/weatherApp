@@ -33,45 +33,8 @@ public class Current {
         mTimeZone = timeZone;
     }
 
-    public String getIcon() {
-        return mIcon;
-    }
-
-    public int getIconId(){
-        int iconID = R.mipmap.clear_day;
-
-        if(mIcon.equals("clear-day")){
-            iconID = R.mipmap.clear_day;
-        }
-        else if(mIcon.equals("clear-night")){
-            iconID = R.mipmap.clear_night;
-        }
-        else if (mIcon.equals("rain")) {
-            iconID = R.mipmap.rain;
-        }
-        else if (mIcon.equals("snow")) {
-            iconID = R.mipmap.snow;
-        }
-        else if (mIcon.equals("sleet")) {
-            iconID = R.mipmap.sleet;
-        }
-        else if (mIcon.equals("wind")) {
-            iconID = R.mipmap.wind;
-        }
-        else if (mIcon.equals("fog")) {
-            iconID = R.mipmap.fog;
-        }
-        else if (mIcon.equals("cloudy")) {
-            iconID = R.mipmap.cloudy;
-        }
-        else if (mIcon.equals("partly-cloudy-day")) {
-            iconID = R.mipmap.partly_cloudy;
-        }
-        else if (mIcon.equals("partly-cloudy-night")) {
-            iconID = R.mipmap.cloudy_night;
-        }
-
-        return iconID;
+    public int getIcon() {
+        return Forecast.getIconId(mIcon);
     }
 
     public void setIcon(String icon) {
