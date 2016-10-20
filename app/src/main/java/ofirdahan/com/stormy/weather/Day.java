@@ -11,9 +11,25 @@ public class Day implements Parcelable{
     private long mTime;
     private String mSummary;
     private double mTemperatureMax;
+    private double mApparentTemperatureMax;
     private String mIcon;
     private String mTimeZone;
 
+    public double getApparentTemperatureMax() {
+        return (int) Math.round( mApparentTemperatureMax);
+    }
+
+    public void setApparentTemperatureMax(double apparentTemperatureMax) {
+        mApparentTemperatureMax = apparentTemperatureMax;
+    }
+
+    public int getTemperatureMax() {
+        return (int) Math.round(mTemperatureMax);
+    }
+
+    public void setTemperatureMax(double temperatureMax) {
+        mTemperatureMax = temperatureMax;
+    }
 
     public long getTime(long time) {
         return mTime;
@@ -31,13 +47,7 @@ public class Day implements Parcelable{
         mSummary = summary;
     }
 
-    public int getTemperatureMax() {
-        return (int) Math.round(mTemperatureMax);
-    }
 
-    public void setTemperatureMax(double temperatureMax) {
-        mTemperatureMax = temperatureMax;
-    }
 
     public String getIcon() {
         return mIcon;

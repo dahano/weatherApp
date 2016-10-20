@@ -65,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
 
         mProgressBar.setVisibility(View.INVISIBLE);
 
-        final double latitude = 34.052235;
-        final double longitude = -118.243683;
+        final double latitude = 37.8267;
+        final double longitude = -122.4233;
 
 
         mRefreshImageView.setOnClickListener(new View.OnClickListener() {
@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                     });
                     try {
                         String jsonData = response.body().string();
-                        Log.v(TAG,jsonData );
+                        Log.v(TAG,jsonData);
                         if (response.isSuccessful()) {
                             mForcast = parseForecastDetails(jsonData);
                             runOnUiThread(new Runnable() {
@@ -220,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
         JSONObject forecast = new JSONObject(jsonData);
         String timezone = forecast.getString("timezone");
         Log.i(TAG, "From JSON: " + timezone);
-
+        System.out.println("Forecast: " + forecast);
         JSONObject currently = forecast.getJSONObject("currently");
 
         Current current = new Current();
