@@ -4,22 +4,34 @@
                 xmlns:tools="http://schemas.android.com/tools"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingLeft="64dp"
-                android:paddingRight="32dp"
                 android:paddingTop="4dp"
                 android:paddingBottom="4dp"
                 tools:background="#ffaa00">
 
-  <!--  <ImageView
+    <TextView
+        tools:text="Wednesday"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/bg_temperature"
-        android:id="@+id/circleImageView"
-        android:background="@mipmap/bg_temperature"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>-->
+        android:gravity="left"
+        android:id="@+id/dayNameLabel"
+        android:textColor="#ffffffff"
+        android:textSize="20sp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/temperatureLabel"
+        android:layout_toEndOf="@+id/temperatureLabel"
+        android:layout_marginLeft="44dp"
+        android:layout_marginStart="44dp"/>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@mipmap/clear_day"
+        android:id="@+id/iconImageView"
+        android:layout_alignTop="@+id/temperatureLabel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="42dp"
+        android:layout_marginStart="42dp"/>
 
     <TextView
         tools:text="999"
@@ -27,31 +39,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/temperatureLabel"
         android:textColor="@color/cast_expanded_controller_text_color"
-        android:textSize="16sp"
+        android:textSize="25sp"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/clear_day"
-        android:id="@+id/iconImageView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"/>
-
-    <TextView
-        tools:text="Wednesday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/dayNameLabel"
-        android:textColor="#ffffffff"
-        android:textSize="14sp"
-        android:layout_marginRight="11dp"
-        android:layout_marginEnd="11dp"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"/>
+        android:layout_toRightOf="@+id/iconImageView"
+        android:layout_toEndOf="@+id/iconImageView"
+        android:layout_marginLeft="34dp"
+        android:layout_marginStart="34dp"/>
 
 </RelativeLayout>

@@ -6,4 +6,5 @@
     <string name="network_on_available">Network aint working</string>
     <string name="title_activity_daily_forecast">DailyForecastActivity</string>
     <string name="no_daily_forecast_data">there is no data to display</string>
+    <string name="Today_Label">Today</string>
 </resources>

@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private Forecast mForcast;
     private LocationRequest mLocationRequest;
     public static final String DAILY_FORECAST = "DAILY_FORECAST";
+    public static final String HOURLY_FORECAST = "HOURLY_FORECAST";
 
     @BindView(R.id.temperatureLabel) TextView mTemperatureLabel;
     @BindView(R.id.timeLabel) TextView mTimeLabel;
@@ -65,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
 
         mProgressBar.setVisibility(View.INVISIBLE);
 
-        final double latitude = 37.8267;
-        final double longitude = -122.4233;
+        final double latitude = 34.052235;
+        final double longitude = -118.243683;
 
 
         mRefreshImageView.setOnClickListener(new View.OnClickListener() {
@@ -257,6 +258,13 @@ public class MainActivity extends AppCompatActivity {
     public void startDailyActivity(View view){
         Intent intent = new Intent(this, DailyForecastActivity.class);
         intent.putExtra(DAILY_FORECAST, mForcast.getDailyForecast());
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.hourlyButton)
+    public void startHourlyActivity(View view){
+        Intent intent = new Intent(this, HourlyForecastActivity.class);
+        intent.putExtra(HOURLY_FORECAST, mForcast.getHourlyForecast());
         startActivity(intent);
     }
 }

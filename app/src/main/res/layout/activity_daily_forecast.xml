@@ -15,11 +15,12 @@
 
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@android:id/list"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_marginTop="60dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:layout_marginBottom="33dp">
 
     </ListView>
 
@@ -31,4 +32,26 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:textColor="#ffffffff"/>
+
+    <TextView
+        android:text="Los Angeles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffffff"
+        android:textSize="18sp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"/>
+
+    <TextView
+        android:text="This Weeks Weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/thisWeekLabel"
+        android:textColor="#FFFFFFFF"
+        android:textSize="30sp"
+        android:layout_above="@+id/listView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"/>
+
 </RelativeLayout>
