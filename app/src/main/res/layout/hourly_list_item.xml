@@ -39,7 +39,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="false"
-        android:paddingRight="10dp"
+        android:paddingRight="20dp"
         android:textColor="#ffffffff"
         android:textSize="24sp"/>
 
@@ -54,7 +54,6 @@
         android:textSize="18sp"
         android:layout_toRightOf="@+id/iconImageView"
         android:layout_toLeftOf="@+id/temperatureLabel"
-
         android:paddingRight="15dp"
-        android:paddingLeft="15dp"/>
+        android:paddingLeft="35dp"/>
 </RelativeLayout>
